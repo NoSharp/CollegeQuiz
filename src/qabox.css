@@ -7,14 +7,17 @@
     padding-top: auto;
     display: flex;
 }
+
 .answerbox{
     width: 50%;
     margin-top: 0;
 }
+
 .qaboxText{
     font-size: 2em;
     width: 50%;
 }
+
 .qabox-radios{
     width: 5%;
 }
