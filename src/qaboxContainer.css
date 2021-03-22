@@ -1,0 +1,17 @@
+@media screen and (max-width: 720px){
+    .TestContainer{
+        width:100%;
+    }
+}
+
+@media screen and (min-width: 450px){
+    
+    .TestContainer{
+        margin-left: auto;
+        margin-right: auto;
+        width:35%;
+        height: 100vh;
+        background-color: #252525;
+    }
+
+}
