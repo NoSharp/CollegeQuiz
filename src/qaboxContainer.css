@@ -1,12 +1,18 @@
-@media screen and (max-width: 720px){
+@media screen and (max-width: 1075px){
     .TestContainer{
-        width:100%;
+        width:90%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: auto;
+        margin-bottom: auto;
     }
 }
 
-@media screen and (min-width: 450px){
+@media screen and (min-width: 1075px){
     
     .TestContainer{
+        margin-top: auto;
+        margin-bottom: auto;
         margin-left: auto;
         margin-right: auto;
         width:35%;
