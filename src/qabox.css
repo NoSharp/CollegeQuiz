@@ -12,18 +12,19 @@
 .answerbox{
     margin-top: auto;
     margin-bottom: auto;
-    margin-right: auto;
-    margin-left: auto;
+    margin-right: 1vw;
+    margin-left: 1vw;
 
     width: 25% !important;
 }
 
+.selected-answer{
+    background-color: #006AAA !important;
+}
+
 .answerbox-answer{
     height: auto;
-    flex-grow: 0.5 !important;
-    width: 25%  !important;
-    padding-left: auto;
-    padding-right : auto;
+    width: 5%  !important;
     font-size: 1.25vh !important;
 }
 
