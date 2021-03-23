@@ -31,7 +31,7 @@ class QABoxContainer extends React.Component{
                 
                 for(let question in jsonData.questionList){
                     console.log(question);
-                    questions.push(jsonData.questionList[question]);
+                    questions.push({1: jsonData.questionList[question], 2: question});
                 }
                 console.log(questions);
                 this.setState({
@@ -53,7 +53,7 @@ class QABoxContainer extends React.Component{
         return (
             <div className = "TestContainer">
                 {questions.map(question => (
-                    <QABox question={question}></QABox>
+                    <QABox question={question[1]} number={question[2]}></QABox>
                 ))}
             </div>
         )

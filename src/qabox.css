@@ -10,11 +10,14 @@
 }
 
 .answerbox{
-    width: 25%;
-    margin-top: 0;
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 25% !important;
 }
 
 .qaboxText{
+    margin-top: auto;
+    margin-bottom: auto;
     font-size: 2vh;
     width: 75%;
 }

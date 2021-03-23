@@ -10,11 +10,14 @@ class QAbox extends React.Component{
     render(){
         return <div className="qabox">
             <h1 className="qaboxText">{this.props.question}</h1>
-            <div className="answerbox">
-            <div className="btn-group mr-2" role="group" aria-label="First group">
-                <button type="button" className="btn btn-secondary">True</button>
-                <button type="button" className="btn btn-secondary">False</button>
-            </div>
+            <div className="btn-group answerbox" role="group" data-toggle="buttons">
+                 <label class="btn btn-secondary" for={"true." + this.props.number}>
+                    <input class="btn-check" type="radio" name="options" id={"true." + this.props.number} autocomplete="off"/>True
+                </label>
+                <label class="btn btn-secondary" for={"false." + this.props.number}>
+                    <input class="btn-check" type="radio" name="options" id={"false." + this.props.number} autocomplete="off"/>False
+                </label>
+
             </div>
         </div>
     }
@@ -22,7 +25,8 @@ class QAbox extends React.Component{
 }
 
 QAbox.propTypes = {
-    question: PropTypes.string
+    question: PropTypes.string,
+    number: PropTypes.number
 }
 
 export default QAbox;
