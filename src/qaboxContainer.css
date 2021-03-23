@@ -1,6 +1,7 @@
 @media screen and (max-width: 1075px){
     .TestContainer{
         width:90%;
+        height: 125%;
         margin-left: auto;
         margin-right: auto;
         margin-top: auto;
