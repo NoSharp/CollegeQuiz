@@ -57,8 +57,10 @@ class QABoxContainer extends React.Component{
                 {questions.map(question => (
                     <QABox question={question[1]} number={question[2]} selected={false}></QABox>
                 ))}
+                
                 <SubmitButton></SubmitButton>
             </div>
+
         )
     }
 
