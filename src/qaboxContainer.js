@@ -3,6 +3,7 @@ import './qaboxContainer.css'
 import QABox from './qabox.js'
 import React from "react"
 import TitleBox from "./titleBox"
+import SubmitButton from "./submitButton";
 /**
  * Represents a question and answer box container which
  * Get's a list of question from the Spring API.
@@ -48,14 +49,14 @@ class QABoxContainer extends React.Component{
         if(!this.state.loaded) return <div></div>;
         
         const {gameUUID, loaded, questions} = this.state;
-        // const gameUUID = this.props.gameUUID;
 
         return (
-            <div className = "TestContainer">
+            <div className = "QAContainer">
                 <TitleBox title="Answer the Questions below" ></TitleBox>
                 {questions.map(question => (
                     <QABox question={question[1]} number={question[2]} selected={false}></QABox>
                 ))}
+                <SubmitButton></SubmitButton>
             </div>
         )
     }

@@ -1,5 +1,5 @@
 @media screen and (max-width: 1075px){
-    .TestContainer{
+    .QAContainer{
         width:90%;
         height: 125%;
         margin-left: auto;
@@ -11,7 +11,7 @@
 
 @media screen and (min-width: 1075px){
     
-    .TestContainer{
+    .QAContainer{
         margin-top: auto;
         margin-bottom: auto;
         margin-left: auto;
