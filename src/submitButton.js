@@ -10,7 +10,22 @@ class submitButton extends React.Component{
         return <div className="submitButton">
             <button type= "button" className="btn btn-success" onClick={
                 ()=>{
-                    this.getAnswersFromContainer();
+                    const answers = this.getAnswersFromContainer();
+                    const gameUUID = this.getGameUUID();
+                    let correctAnswers = {};
+                    fetch(`http://localhost:8080/api/v1/GetAnswer/${gameUUID}`,{
+                        crossDomain: true,
+                        method: "GET"
+                    })
+                        .then(res=>res.json())
+                        .then((res)=>{
+                            const answerList = res.answerList;
+                            for(const answerKey in answerList){
+                                correctAnswers[answerKey] = answers[answerKey] == answerList[answerKey];
+                            }
+                            console.log(correctAnswers);
+                        })
+                        .catch(err=> console.log(` ERROR: ${err}`))
                 }
             }>Submit</button>
         </div>
@@ -47,6 +62,10 @@ class submitButton extends React.Component{
 
     getRadioFromElement(element){
         return element.childNodes;
+    }
+
+    getGameUUID(){
+        return document.getElementsByClassName("gameUUID")[0].id;
     }
 
 }
