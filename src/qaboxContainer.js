@@ -52,6 +52,7 @@ class QABoxContainer extends React.Component{
 
         return (
             <div className = "QAContainer">
+                <div class="gameUUID" id={gameUUId}/>
                 <TitleBox title="Answer the Questions below" ></TitleBox>
                 {questions.map(question => (
                     <QABox question={question[1]} number={question[2]} selected={false}></QABox>
