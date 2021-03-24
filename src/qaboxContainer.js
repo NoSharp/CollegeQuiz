@@ -63,10 +63,4 @@ class QABoxContainer extends React.Component{
 
 }
 
-// QABoxContainer.propTypes = {
-//     questions: PropTypes.array,
-//     gameUUID: PropTypes.string,
-//     loaded: PropTypes.bool
-// }
-
 export default QABoxContainer;
