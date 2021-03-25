@@ -28,9 +28,10 @@ class submitButton extends React.Component{
                 ()=>{
                     if(this.state.selected) return;
                     const answers = this.getUserAnswersFromContainer();
+                    if(!answers) return;
                     const gameUUID = this.getGameUUID();
                     let correctAnswers = {};
-                    fetch(`http://localhost:8080/api/v1/GetAnswer/${gameUUID}`,{
+                    fetch(`http://127.0.0.1:8080/api/v1/GetAnswer/${gameUUID}`,{
                         crossDomain: true,
                         method: "GET"
                     })
@@ -79,8 +80,13 @@ class submitButton extends React.Component{
         const selectedElements = this.getAllSelectedElements();
         const questions = this.getAllQuestions();
         let answers = {};
-        for(const element in selectedElements){
-            if(isNaN(element)) continue;
+        for(let i = 0; i < 10;i++){
+            const element = i;
+            console.log(element);
+            if(selectedElements[element] === undefined){
+                window.alert("Make sure you've answered all of the questions!");
+                return false;
+            }
             const parsedAnswerAndId = this.parseAnswerFromIdOfInput(selectedElements[element].id);
             answers[parsedAnswerAndId.id] = [parsedAnswerAndId.answer,questions[parsedAnswerAndId.id].innerText]
         }
