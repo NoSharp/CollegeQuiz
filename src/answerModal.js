@@ -3,6 +3,7 @@ import "./answerModal.css"
 import Modal from "react-bootstrap/Modal";
 import Button from "react-bootstrap/Button";
 import ProgressBar from "react-bootstrap/ProgressBar";
+
 class AnswerModal extends React.Component{
 
     constructor(props){

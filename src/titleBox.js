@@ -13,6 +13,7 @@ class TitleBox extends React.Component{
     render(){
         return <div className="titleBox">
             <h1 className="titleBoxText">{this.props.title}</h1>
+            {this.props.children}
         </div>
     }
 

@@ -4,6 +4,7 @@ import QABox from './qabox.js'
 import React from "react"
 import TitleBox from "./titleBox"
 import SubmitButton from "./submitButton";
+import InfoButton from './infoButton';
 /**
  * Represents a question and answer box container which
  * Get's a list of question from the Spring API.
@@ -20,7 +21,7 @@ class QABoxContainer extends React.Component{
     }
 
     componentDidMount(){
-        fetch("http://localhost:8080/api/v1/GetNewQuestionList",{
+        fetch("http://127.0.0.1:8080/api/v1/GetNewQuestionList",{
             crossDomain: true,
             method: "GET"
         })
@@ -53,7 +54,9 @@ class QABoxContainer extends React.Component{
         return (
             <div className = "QAContainer">
                 <div class="gameUUID" id={gameUUID}/>
-                <TitleBox title="Answer the Questions below" ></TitleBox>
+                <TitleBox title="Answer the Questions below" >
+                </TitleBox>
+                <InfoButton></InfoButton>
                 {questions.map(question => (
                     <QABox question={question[1]} number={question[2]} selected={false}></QABox>
                 ))}
